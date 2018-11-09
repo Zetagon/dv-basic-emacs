@@ -1,6 +1,6 @@
 ;; -*- lexical-binding: t -*-
 
-;; Alla rader markerade med ";*" på slutet representerar rader som krävs för evil-mode(ett plugin för att få vim bindings)
+;; Alla rader markerade med ";--" på slutet representerar rader som krävs för evil-mode(ett plugin för att få vim bindings)
 
 ;;* Misc.
 
@@ -23,63 +23,63 @@
 
 ;;** Evil mode
 ;;*** Leader keybindings
-(use-package undo-tree			;*
-             :ensure t)			;*
-(use-package evil-leader		;*
-  :ensure t                            	;*
+(use-package undo-tree			;--
+             :ensure t)			;--
+(use-package evil-leader		;--
+  :ensure t                            	;--
   :after (evil)
-  :config				;*
-  (global-evil-leader-mode)		;*
-  (setq evil-leader/leader "<SPC>")	;*
-  (evil-leader/set-key			;*
-   "bs" 'save-buffer			;*
-   "." 'find-file			;*
-   "bk" 'kill-this-buffer		;*
-   "wc" 'delete-window			;*
-   "ws" 'evil-window-split		;*
-   "wv" 'evil-window-vsplit		;*
-   "wh"  'evil-window-left		;*
-   "wl"  'evil-window-right		;*
-   "wk"  'evil-window-up		;*
-   "wj"  'evil-window-down))		;*
-;;*** Evil-config                                           ;*
-(use-package evil			;*
-  :ensure t				;*
-  :after (undo-tree)			;*
-  :config (global-undo-tree-mode))	;*
-;;*** Evil escape                                           ;*
-(use-package evil-escape		;*
-  :ensure t				;*
-  :after (evil)				;*
-  :config				;*
-  (setq-default evil-escape-key-sequence "jk") ;*
-  (evil-escape-mode))			       ;*
-;;*** surround                                           ;*
-(use-package evil-surround		;*
-  :ensure t				;*
-  :after (evil)				;*
-  :config				;*
-  (global-evil-surround-mode 1))	;*
+  :config				;--
+  (global-evil-leader-mode)		;--
+  (setq evil-leader/leader "<SPC>")	;--
+  (evil-leader/set-key			;--
+   "bs" 'save-buffer			;--
+   "." 'find-file			;--
+   "bk" 'kill-this-buffer		;--
+   "wc" 'delete-window			;--
+   "ws" 'evil-window-split		;--
+   "wv" 'evil-window-vsplit		;--
+   "wh"  'evil-window-left		;--
+   "wl"  'evil-window-right		;--
+   "wk"  'evil-window-up		;--
+   "wj"  'evil-window-down))		;--
+;;*** Evil-config                                           ;--
+(use-package evil			;--
+  :ensure t				;--
+  :after (undo-tree)			;--
+  :config (global-undo-tree-mode))	;--
+;;*** Evil escape                                           ;--
+(use-package evil-escape		;--
+  :ensure t				;--
+  :after (evil)				;--
+  :config				;--
+  (setq-default evil-escape-key-sequence "jk") ;--
+  (evil-escape-mode))			       ;--
+;;*** surround                                           ;--
+(use-package evil-surround		;--
+  :ensure t				;--
+  :after (evil)				;--
+  :config				;--
+  (global-evil-surround-mode 1))	;--
 ;;** Magit
 (use-package magit
   :ensure t
-  :after (evil-leader)			;*
+  :after (evil-leader)			;--
   :config
-  (evil-leader/set-key			;*
-    "gs" 'magit-status)			;*
+  (evil-leader/set-key			;--
+    "gs" 'magit-status)			;--
   )					
-(use-package evil-magit			;*
-  :ensure t				;*
-  :after (magit)			;*
-  :config)				;*
+(use-package evil-magit			;--
+  :ensure t				;--
+  :after (magit)			;--
+  :config)				;--
 ;;** Autocomplete
 (use-package company
   :ensure t
-  :after (evil-leader)			;*
+  :after (evil-leader)			;--
   :config
   (global-company-mode)
-  (evil-leader/set-key			;*
-    "M-/" 'company-complete)		;*
+  (evil-leader/set-key			;--
+    "M-/" 'company-complete)		;--
   ) 
 
 ;;** which-key
@@ -92,13 +92,13 @@
 ;;** Fuzzy finding
 (use-package ivy
   :ensure t
-  :after (evil-leader)		;*
+  :after (evil-leader)		;--
   :bind ("C-s" . swiper)	;Is overriden by default at the bottom
   :config
   (ivy-mode)
-  (evil-leader/set-key			;*
-    "<SPC>" 'execute-extended-command	;*
-    "bb" 'ivy-switch-buffer)		;*
+  (evil-leader/set-key			;--
+    "<SPC>" 'execute-extended-command	;--
+    "bb" 'ivy-switch-buffer)		;--
   )
 ;;* Language-configs
 ;;** Haskell
@@ -109,7 +109,7 @@
 (use-package tex
   :ensure auctex
   :config
-  (evil-leader/set-key-for-mode 'LaTeX-mode "," 'TeX-command-master) ;*
+  (evil-leader/set-key-for-mode 'LaTeX-mode "," 'TeX-command-master) ;--
   )
 
   
