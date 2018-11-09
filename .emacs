@@ -17,7 +17,7 @@
 	    ;; | C-x u       | Undo                                             |
 	    ;; | C-x b       | Öppna tidigare öppnad fil(sen du startade Emacs) |
 
-	    ;; Längst ner i den här filen finns några rader som gör att C-x, C-s, C-c, C-f och C-v fungerar som andra text-redigerare.
+	    ;; Längst ner i den här filen finns några rader som gör att C-x, C-s, C-c och C-v fungerar som andra text-redigerare.
 
 
 ;;* Misc.
