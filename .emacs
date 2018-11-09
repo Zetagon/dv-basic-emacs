@@ -21,13 +21,13 @@
 (eval-when-compile
   (require 'use-package))
 
-;;** Evil mode
-;;*** Leader keybindings
+;;** Evil mode                          ;--
+;;*** Leader keybindings                ;--
 (use-package undo-tree			;--
              :ensure t)			;--
 (use-package evil-leader		;--
   :ensure t                            	;--
-  :after (evil)
+  :after (evil)				;--
   :config				;--
   (global-evil-leader-mode)		;--
   (setq evil-leader/leader "<SPC>")	;--
