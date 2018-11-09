@@ -1,12 +1,12 @@
 # Installation
 
-Se till så att det inte finns en .emacs fil i ~
-`
+Se till så att det inte finns en .emacs fil i ~/
+```
 cd ~
 git clone https://github.com/Zetagon/dv-basic-emacs.git
 ln -s ~/dv-basic-emacs/.emacs ~/.emacs
 emacs
-`
+```
 
 Det finns lite beskrivningar av hur man använder den här konfigen och Emacs generellt i .emacs filen.
 
