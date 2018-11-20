@@ -63,7 +63,6 @@
 ;;** Magit
 (use-package magit
   :ensure t
-  :after (evil-leader)			;--
   :config
   (evil-leader/set-key			;--
     "gs" 'magit-status)			;--
@@ -75,7 +74,6 @@
 ;;** Autocomplete
 (use-package company
   :ensure t
-  :after (evil-leader)			;--
   :config
   (global-company-mode)
   (evil-leader/set-key			;--
@@ -92,7 +90,6 @@
 ;;** Fuzzy finding
 (use-package ivy
   :ensure t
-  :after (evil-leader)		;--
   :bind ("C-s" . swiper)	;Is overriden by default at the bottom
   :config
   (ivy-mode)
@@ -104,7 +101,12 @@
 ;;** Haskell
 (use-package haskell-mode
   :ensure t
-  :mode "\\.hs\\'")
+  :bind
+  (:map haskell-mode-map
+	("C-c C-l" . haskell-process-load-file)))
+
+(evil-define-key 'normal haskell-mode-map ;--
+  ",l" 'haskell-process-load-file)	  ;--
 ;;** LaTeX
 (use-package tex
   :ensure auctex
