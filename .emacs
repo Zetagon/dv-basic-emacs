@@ -141,12 +141,14 @@
   )
 
   
-
+(ivy-mode)
 ;;* Like-windows config
 ;; Se https://www.emacswiki.org/emacs/CuaMode 
+
 (cua-mode t)				  ; Ctrl + x,c,v för att klippa, kopiera respektive klistra in
 (global-set-key (kbd "C-s") 'save-buffer) ; Ctrl + s för att spara
 (global-set-key (kbd "C-f") 'swiper)	  ; Ctrl + f för att söka
+
 ;; (evil-mode 1)                          ; Vim bindings. Ta bort semikolon i början för att aktivera           ;--
 ;;* Custom set variables
 
