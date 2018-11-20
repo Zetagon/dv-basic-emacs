@@ -2,6 +2,7 @@
 
 ;; Alla rader markerade med ";--" på slutet representerar rader som krävs för evil-mode(ett plugin för att få vim bindings)
 
+;; https://github.com/noctuid/evil-guide#keybindings-in-emacs
 ;;* Misc.
 
 ;;** use-package configuration
@@ -46,7 +47,14 @@
 (use-package evil			;--
   :ensure t				;--
   :after (undo-tree)			;--
+  :init
+  (setq evil-want-keybinding nil)
   :config (global-undo-tree-mode))	;--
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init))
 ;;*** Evil escape                                           ;--
 (use-package evil-escape		;--
   :ensure t				;--
@@ -76,7 +84,7 @@
   :ensure t
   :config
   (global-company-mode)
-  (evil-leader/set-key			;--
+  (evil-define-key nil evil-insert-state-map 
     "M-/" 'company-complete)		;--
   ) 
 
