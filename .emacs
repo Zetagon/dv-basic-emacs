@@ -1,6 +1,24 @@
 ;; -*- lexical-binding: t -*-
 
-;; Alla rader markerade med ";--" på slutet representerar rader som krävs för evil-mode(ett plugin för att få vim bindings)
+;; Alla rader markerade med ";--" på slutet representerar rader som krävs för evil-mode(ett plugin för att få vim bindings) och kan tas bort.
+
+	    ;; Grundläggande terminologi:
+
+	    ;; C-g betyder Ctrl + g.
+	    ;; C-x C-f betyder: Håll ner Ctrl och tryck x sen f.
+	    ;; C-x u bedyer: Tryck Ctrl + x, släpp controll och tryck u.
+
+	    ;; Viktiga default Emacs-kommandon.
+	    ;; | key-binding | Beskrivning                                      |
+	    ;; |-------------+--------------------------------------------------|
+	    ;; | C-g         | Avbryt                                           |
+	    ;; | C-x C-f     | Hitta fil                                        |
+	    ;; | C-x C-s     | Spara fil                                        |
+	    ;; | C-x u       | Undo                                             |
+	    ;; | C-x b       | Öppna tidigare öppnad fil(sen du startade Emacs) |
+
+	    ;; Längst ner i den här filen finns några rader som gör att C-x, C-s, C-c och C-v fungerar som andra text-redigerare.
+
 
 ;; https://github.com/noctuid/evil-guide#keybindings-in-emacs
 ;;* Misc.
@@ -129,6 +147,6 @@
 (cua-mode t)				  ; Ctrl + x,c,v för att klippa, kopiera respektive klistra in
 (global-set-key (kbd "C-s") 'save-buffer) ; Ctrl + s för att spara
 (global-set-key (kbd "C-f") 'swiper)	  ; Ctrl + f för att söka
-;; (evil-mode 1)                          ; Vim bindings. Ta bort semikolon i början för att aktivera
+;; (evil-mode 1)                          ; Vim bindings. Ta bort semikolon i början för att aktivera           ;--
 ;;* Custom set variables
 
