@@ -101,9 +101,10 @@
 (use-package company
   :ensure t
   :config
+  (setq company-dabbrev-downcase nil)
   (global-company-mode)
   (evil-define-key nil evil-insert-state-map 
-    "M-/" 'company-complete)		;--
+    (kbd "M-/") 'company-complete)		;--
   ) 
 
 ;;** which-key
